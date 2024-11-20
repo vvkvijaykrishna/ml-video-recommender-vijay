@@ -1,6 +1,6 @@
 # ML: Video Recommender 🤖🎬
 
-> Machine learning model which predicts the likability of unseen videos based on a child's previously seen videos.
+> Machine learning model which predicts the likability of unseen videos based on a student's previously seen videos.
 
 > [!IMPORTANT]
 > This machine learning model will be used by Android applications that do not have access to an Internet connection, e.g. [Filamu](https://github.com/elimu-ai/filamu).
