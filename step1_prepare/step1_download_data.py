@@ -2,7 +2,7 @@ import os
 import pandas
 
 # Read the storybooks CSV into a DataFrame, and write the DataFrame to a CSV file
-videos_csv_url = 'https://raw.githubusercontent.com/elimu-ai/webapp/main/src/main/resources/db/content_PROD/eng/videos.csv'
+videos_csv_url = 'https://raw.githubusercontent.com/elimu-ai/webapp-lfs/main/lang-ENG/videos.csv'
 print(os.path.basename(__file__), 'videos_csv_url: {}'.format(videos_csv_url))
 videos_dataframe = pandas.read_csv(videos_csv_url)
 print(os.path.basename(__file__), 'videos_dataframe: \n{}'.format(videos_dataframe))
