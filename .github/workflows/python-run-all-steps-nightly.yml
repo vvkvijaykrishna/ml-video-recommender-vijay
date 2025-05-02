@@ -12,25 +12,46 @@ jobs:
           working-directory: ./
     steps:
     - uses: actions/checkout@v4
+    
     - name: Set up Python 3.11
       uses: actions/setup-python@v3
       with:
         python-version: "3.11"
+    
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    
     - name: Run All Steps
       run: |
         python run_all_steps.py
+    
+    - name: GitHub Actor
+      env: 
+        GITHUB_ACTOR: ${{ github.actor }}   
+      run: echo "$GITHUB_ACTOR"
+
+    - name: GitHub Triggering Actor
+      env: 
+        GITHUB_TRIGGERING_ACTOR: ${{ github.triggering_actor }}   
+      run: echo "$GITHUB_TRIGGERING_ACTOR"
+
     - name: Git Config
       run: |
-        git config user.name 'Nya Ξlimu'
-        git config user.email 'info@elimu.ai'
+        git config user.name github-actions[bot]
+        git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+    
     - name: Git Commit
       run: |
         git add step1_prepare/*.csv
         git commit -m 'chore(ml): nightly build'
+    
+    - name: Git Pull
+      run: |
+        git fetch
+        git pull
+    
     - name: Git Push
       run: |
         git push
