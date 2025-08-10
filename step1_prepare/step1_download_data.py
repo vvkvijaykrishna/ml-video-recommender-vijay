@@ -8,16 +8,8 @@ videos_dataframe = pandas.read_csv(videos_csv_url)
 print(os.path.basename(__file__), 'videos_dataframe: \n{}'.format(videos_dataframe))
 videos_dataframe.to_csv('step1_videos.csv', index=False)
 
-# Read the learning events CSV into a DataFrame, and write the DataFrame to a CSV file
-# video_learning_events_csv_url = 'https://raw.githubusercontent.com/elimu-ai/ml-datasets/main/lang-ENG/video-learning-events.csv'
-# print(os.path.basename(__file__), f'video_learning_events_csv_url: {video_learning_events_csv_url}')
-# video_learning_events_dataframe = pandas.read_csv(video_learning_events_csv_url)
-# print(os.path.basename(__file__), f'video_learning_events_dataframe: \n{video_learning_events_dataframe}')
-# video_learning_events_dataframe.to_csv('step1_video_learning_events.csv', index=False)
-
 with open('step1_video_learning_events.csv', 'w') as f:
     pass
-
 students_url = 'https://raw.githubusercontent.com/elimu-ai/ml-datasets/main/lang-ENG/students.csv'
 print(os.path.basename(__file__), 'students_url: {}'.format(students_url))
 students_dataframe = pandas.read_csv(students_url)
