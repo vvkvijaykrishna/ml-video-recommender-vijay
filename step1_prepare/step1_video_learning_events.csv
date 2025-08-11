@@ -1,3 +1,4 @@
+id,timestamp,package_name,additional_data,research_experiment,experiment_group,video_title,video_id
 5807424,1749511949,ai.elimu.filamu,,,,akili and me - letter a,1
 5807425,1749511995,ai.elimu.filamu,{'video_playback_position_ms': 18144},,,akili and me - letter a,1
 5807426,1749512026,ai.elimu.filamu,,,,akili and me - letter c,3
