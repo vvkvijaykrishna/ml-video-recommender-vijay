@@ -3,6 +3,7 @@ name: Python - Run all steps (Nightly Build)
 on:
   schedule:
     - cron: 30 23 * * *
+  workflow_dispatch:
 
 jobs:
   build:
